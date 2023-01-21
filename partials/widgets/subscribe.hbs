@@ -1,0 +1,21 @@
+{{#if @member}}
+{{else}}
+<div class="widget widget_epcl_posts_thumbs grid-25 tablet-grid-50 mobile-grid-100">
+    <h4 class="widget-title title medium bordered"><span class="bg">{{t "Subscribe" }}</span><span class="border"></span></h4>
+    <p>{{t "Don't worry, subscribing is free."}}</p>           	
+    <ul>
+        <li>&#x2022; {{t "Get the latest posts delivered right to your email"}}</li>
+        <li>&#x2022; {{t "Be able to comment on posts"}}</li>
+        <li>&#x2022; {{t "Access subscriber-only content"}}</li>
+    </ul>
+
+    <form class="subscribe-form" data-members-form="subscribe">
+	<div class="form-group">
+	    <input type="email" name="email" class="inputbox" required placeholder="{{t "Enter your email address"}}" data-members-email>
+	</div>
+	<button class="epcl-button dark bordered submit" type="submit" data-title="{{t "Submit"}}">{{t "Submit"}}<span class="loader"></span></button>
+	<p class="error-detail" data-members-error></p>
+	<p class="success-message">{{t "Subscription was sent successfully, check your email"}} <i class="fa fa-envelope-o"></i></p>
+    </form>
+</div>
+{{/if}}

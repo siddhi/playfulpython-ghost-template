@@ -1,0 +1,17 @@
+{{!< default-post}}
+
+{{! If you want to edit post sections/modules go to default-post.hbs
+which contains all sections applied for Classic/Fullcover articles }}
+
+{{#post}}
+
+    {{#contentFor "main-class"}}standard{{/contentFor}}    
+
+    {{#contentFor "bottom-image"}}
+    {{/contentFor}}
+
+    {{#contentFor "sidebar"}}
+        {{> sidebar }}
+    {{/contentFor}}
+
+{{/post}}

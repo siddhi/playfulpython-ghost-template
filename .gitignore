@@ -1,0 +1,13 @@
+__pycche__
+*.pyc
+*.swp
+*~
+~*
+.idea
+.vscode
+.env
+*.egg-info/
+.testmondata
+.coverage
+htmlcov
+.vercel

@@ -1,0 +1,27 @@
+<!-- start: #footer -->
+<footer id="footer">
+	<div class="widgets grid-container grid-large">
+        <div class="epcl-row">
+
+            {{> widgets/recent-articles }}
+
+            {{> widgets/tag-cloud }}
+
+	    {{> widgets/subscribe }}
+
+            <div class="clear"></div>
+        </div>
+
+	</div>
+
+	<p class="published border-effect">
+	  <span>{{@site.title}} © {{date format="YYYY"}}</span>
+	  <span>{{navigation type="secondary"}}</span>
+        </p>
+
+    <div class="clear"></div>
+
+    <span id="back-to-top" class="epcl-button dark"><i class="fa fa-angle-up"></i></span>
+
+</footer>
+<!-- end: #footer -->
