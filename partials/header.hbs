@@ -1,50 +1,51 @@
 <!-- start: #header -->
-<header id="header" class="classic">
+{{#match @page.show_title_and_feature_image}}
+    <header id="header" class="classic">
 
-	<div class="menu-mobile">
-        <svg class="icon ularge open"><use xlink:href="#menu-icon"></use></svg>
-        <svg class="icon ularge close"><use xlink:href="#close-icon"></use></svg>
-    </div>
+        <div class="menu-mobile">
+            <svg class="icon ularge open"><use xlink:href="#menu-icon"></use></svg>
+            <svg class="icon ularge close"><use xlink:href="#close-icon"></use></svg>
+        </div>
 
-	<!-- start: .menu-wrapper -->
-	<div class="menu-wrapper">
-	
-		<div class="grid-container">
-		
-			{{> site-logo }}
-
-            <div class="epcl-social-buttons fill-color hide-on-tablet hide-on-mobile hide-on-desktop-sm">
-                {{> social-buttons}}
-            </div>
-
-            {{#match @custom.search_engine_method "=" "Native"}}
-                <span data-ghost-search class="epcl-search-button button circle"><svg class="icon"><use xlink:href="#search-icon"></use></svg></span>
-            {{else}}
-                {{#if @custom.search_api_key}}
-                    <a href="#search-lightbox" class="lightbox epcl-search-button custom-search button circle mfp-inline"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
-                {{/if}} 
-            {{/match}}  
-			
-			<!-- start: .main-nav -->
-			<nav class="main-nav">
-				
-				{{navigation}}
-				
-			</nav>
-			<!-- end: .main-nav -->
-
-            <div class="clear"></div>
-		
-		</div>		
+        <!-- start: .menu-wrapper -->
+        <div class="menu-wrapper">
         
-		<div class="clear"></div>
-		
-	</div>
-	<!-- end: .menu-wrapper -->
-	
-	<div class="clear"></div>
+            <div class="grid-container">
+            
+                {{> site-logo }}
 
-</header>
-<!-- end: #header -->
+                <div class="epcl-social-buttons fill-color hide-on-tablet hide-on-mobile hide-on-desktop-sm">
+                    {{> social-buttons}}
+                </div>
 
-{{> search-box}}
+                {{#match @custom.search_engine_method "=" "Native"}}
+                    <span data-ghost-search class="epcl-search-button button circle"><svg class="icon"><use xlink:href="#search-icon"></use></svg></span>
+                {{else}}
+                    {{#if @custom.search_api_key}}
+                        <a href="#search-lightbox" class="lightbox epcl-search-button custom-search button circle mfp-inline"><svg class="icon"><use xlink:href="#search-icon"></use></svg></a>
+                    {{/if}} 
+                {{/match}}  
+                
+                <!-- start: .main-nav -->
+                <nav class="main-nav">
+                    
+                    {{navigation}}
+                    
+                </nav>
+                <!-- end: .main-nav -->
+
+                <div class="clear"></div>
+            
+            </div>		
+            
+            <div class="clear"></div>
+            
+        </div>
+        <!-- end: .menu-wrapper -->
+        
+        <div class="clear"></div>
+
+    </header>
+    <!-- end: #header -->
+    {{> search-box}}
+{{/match}}
